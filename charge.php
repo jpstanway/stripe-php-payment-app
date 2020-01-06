@@ -1,13 +1,7 @@
 <?php
     require_once('vendor/autoload.php');
-    
-    if(!empty($_ENV('SECRET_API_KEY'))) {
-        $API_KEY = $_ENV['SECRET_API_KEY'];
-    } else {
-        require_once('./config.php');
-    }
 
-    \Stripe\Stripe::setApiKey($API_KEY);
+    \Stripe\Stripe::setApiKey('sk_test_qfpFcLmY2nnB6TYAhv2ScnHk00yRKMBges');
 
     // sanitize POST
     $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
