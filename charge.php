@@ -1,7 +1,8 @@
 <?php
     require_once('vendor/autoload.php');
+    require_once('./config.php');
 
-    \Stripe\Stripe::setApiKey('sk_test_qfpFcLmY2nnB6TYAhv2ScnHk00yRKMBges');
+    \Stripe\Stripe::setApiKey($SECRET_API_KEY);
 
     // sanitize POST
     $POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
